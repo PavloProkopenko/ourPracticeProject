@@ -1,4 +1,3 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {
     FlatList,
@@ -15,14 +14,14 @@ const data = [
     {
         id: "123",
         icon: "home",
-        location: "Home",
-        destination: "Code Street, London, UK",
+        location: "Дім",
+        destination: "вулиця Генерала Родимцева, Київ, Україна",
     },
     {
         id: "456",
         icon: "briefcase",
-        location: "Work",
-        destination: "London Eye, London, UK",
+        location: "Робота",
+        destination: "НУБіП, вулиця Героїв Оборони, Київ, Україна",
     },
 ];
 
@@ -41,7 +40,7 @@ const NavFavourites = () => {
     />
     <View>
         <Text style={tw`font-semibold text-lg`}>{location}</Text>
-        <Text style={tw`text-gray-500`}>{destination}</Text>
+        <Text style={tw`text-gray-500 text-xs`}>{destination}</Text>
     </View>
   </TouchableOpacity>
    )}
