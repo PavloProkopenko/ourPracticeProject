@@ -8,15 +8,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const MapScreen = () => {
   const Stack = createNativeStackNavigator();
+
   return (
     <View>
-
+      {/* Блок з мапою */}
       <View style={tw`h-1/2`}>
-      <Map />
+        <Map />
       </View>
 
+      {/* Блок з навігаційними карточками */}
       <View style={tw`h-1/2`}>
+        {/* Навігатор з двома екранами */}
         <Stack.Navigator>
+          {/* Екран для навігації */}
           <Stack.Screen
             name='NavigateCard'
             component={NavigateCard}
@@ -24,6 +28,8 @@ const MapScreen = () => {
               headerShown: false,
             }}
           />
+
+          {/* Екран для вибору опцій поїздки */}
           <Stack.Screen
             name='RideOptionsCard'
             component={RideOptionsCard}
