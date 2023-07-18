@@ -23,9 +23,9 @@ const HomeScreen = () => {
           source={{
             uri: "https://static.wixstatic.com/media/0a1353_ec8003bcfdf247b8a77b9412123e5015~mv2.png",
           }}
-
-
         />
+
+        {/* Поле вибору місця походження */}
         <GooglePlacesAutocomplete
           placeholder='З якого ти міста?'
           styles={{
@@ -37,14 +37,16 @@ const HomeScreen = () => {
             },
           }}
           onPress={(data, details = null) => {
+            // Збереження обраного місця походження у сторінці redux
             dispatch(
               setOrigin({
                 location: details.geometry.location,
                 description: data.description
-              }))
+              })
+            );
 
+            // Збереження обраного місця призначення як null у сторінці redux
             dispatch(setDestination(null));
-
           }}
           fetchDetails={true}
           returnKeyType={"search"}
@@ -57,7 +59,11 @@ const HomeScreen = () => {
           nearbyPlacesAPI='GooglePlacesSearch'
           debounce={400}
         />
+
+        {/* Компонент з вибором типу транспорту */}
         <NavOptions />
+
+        {/* Компонент зі збереженими улюбленими місцями */}
         <NavFavourites />
       </View>
     </SafeAreaView>

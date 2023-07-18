@@ -12,11 +12,15 @@ import { Icon } from 'react-native-elements';
 const NavigateCard = () => {
 	const dispatch = useDispatch();
 	const navigation = useNavigation();
+
 	return (
 		<SafeAreaView style={tw`bg-white flex-1`}>
+			{/* Заголовок сторінки */}
 			<Text style={tw`text-center py-5 text-xl`}>Куди поїдемо в цей раз?</Text>
+
 			<View style={tw`border-t border-gray-200 flex-shrink`}>
 				<View>
+					{/* Вибір точки призначення з допомогою GooglePlacesAutocomplete */}
 					<GooglePlacesAutocomplete
 						placeholder="Обрати точку призначення"
 						styles={toInputBoxStyles}
@@ -31,7 +35,7 @@ const NavigateCard = () => {
 									description: data.description
 								})
 							);
-
+							// Перехід на екран з вибором варіантів поїздки (RideOptionsCard)
 							navigation.navigate('RideOptionsCard');
 						}}
 						query={{
@@ -42,11 +46,12 @@ const NavigateCard = () => {
 						debounce={400}
 					/>
 				</View>
+				{/* Популярні місця (NavFavourites) */}
 				<NavFavourites />
 			</View>
 
 			<View style={tw`flex-row bg-white justify-evenly py-3 mt-auto border-t border-gray-100`}>
-				
+				{/* Кнопка для переходу на екран з вибором варіантів поїздки (Rides) */}
 				<TouchableOpacity
 					onPress={() => navigation.navigate('RideOptionsCard')} 
 					style={tw`flex flex-row justify-between bg-black w-24 px-4 py-3 
@@ -56,6 +61,7 @@ const NavigateCard = () => {
 					<Text style={tw`text-white text-center`}>Rides</Text>
 				</TouchableOpacity>
 
+				{/* Кнопка для переходу на екран з вибором ресторанів (Eats) */}
 				<TouchableOpacity style={tw`flex flex-row justify-between w-24 px-4 py-3 rounded-full`}>
 						<Icon 
 							name="fast-food-outline"
