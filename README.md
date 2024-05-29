@@ -1,9 +1,8 @@
 # Uni Taxi
-This is our project for practice in the university. Within the app you can make an taxi order.
+This is our project for practice in the university. Within the app, you can make a taxi order.
 # Screenshot
-![picture alt](https://github.com/PavloProkopenko/little-lemon/blob/main/Screenshots/Onboarding%20screen.png "Onboarding Screen")
-![picture alt](https://github.com/PavloProkopenko/little-lemon/blob/main/Screenshots/Home%20screen.png "Home Screen")
-![picture alt](https://github.com/PavloProkopenko/little-lemon/blob/main/Screenshots/Profile%20screen.png "Home Screen")
+![picture alt](https://github.com/PavloProkopenko/ourPracticeProject/blob/main/screenshots/image.png)
+
 # Built With
 * [Expo Go](https://kotlinlang.org/): As the programming language.
 * [React Native](https://ktor.io/): For fetching data asynchronously from the server.
@@ -12,8 +11,8 @@ This is our project for practice in the university. Within the app you can make 
 * [React Navigation](https://bumptech.github.io/glide/int/compose.html): To load images asynchronously.
 
 # Installation
-Simply clone this repository and open folder in the development IDE. To clone:
+Simply clone this repository and open the folder in the development IDE. To clone:
 ```
-https://github.com/PavloProkopenko/little-lemon.git
+https://github.com/PavloProkopenko/ourPracticeProject.git
 ```
 
